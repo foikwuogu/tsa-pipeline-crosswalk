@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: dataset
+title: "Policy-to-Control Crosswalk, v1.0: TSA Pipeline SD 2021-02 Series to NIST SP 800-82r3, NIST SP 800-53r5, IEC 62443, and CIS Controls v8"
+version: "1.0.0"
+date-released: "2026-09-09"
+authors:
+  - family-names: "Ikwuogu"
+    given-names: "Friday Ogochukwu"
+    orcid: "https://orcid.org/0009-0009-2222-1318"
+    affiliation: "Independent Researcher, Odessa, Texas, USA"
+  - family-names: "Mike-Ewewie"
+    given-names: "David"
+    affiliation: "Computer Science Department, University of Texas Permian Basin, Odessa, Texas, USA"
+  - family-names: "Ayozie"
+    given-names: "Osorachukwu Maurice"
+    affiliation: "MSc Computer Science (Cybersecurity), University of Texas Permian Basin, Odessa, Texas, USA"
+license: CC-BY-4.0
+repository-code: "https://github.com/foikwuogu/tsa-pipeline-crosswalk"
+doi: "10.5281/zenodo.pending"
+keywords:
+  - "TSA Security Directive"
+  - "pipeline cybersecurity"
+  - "OT security"
+  - "NIST SP 800-82"
+  - "NIST SP 800-53"
+  - "IEC 62443"
+  - "CIS Controls"
+  - "critical infrastructure"
+  - "compliance crosswalk"

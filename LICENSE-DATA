@@ -1,0 +1,14 @@
+This work (all data, documentation, and figures in this repository, excluding
+source code covered by LICENSE-CODE, and excluding any content attributed to
+IEC 62443 or CIS Controls v8, which remain the property of their respective
+publishers and are referenced here at control-ID level only under fair-use/
+citation practice, not reproduced under this license) is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution should credit: Friday Ogochukwu Ikwuogu et al., "Policy-to-Control
+Crosswalk, v1.0: TSA Pipeline SD 2021-02 Series" (2026), and the underlying
+public sources: U.S. Transportation Security Administration; NIST SP 800-82
+Rev. 3 and SP 800-53 Rev. 5 (public domain, U.S. Government works).

@@ -1,0 +1,57 @@
+tsa_outcome_id,sd_section,outcome_title,sd_citation,framework,control_id,control_title,mapping_strength,notes
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,NIST_SP_800-82r3,Sec. 6.2 / Table 6-1,OT asset inventory and system categorization guidance,Primary,800-82r3 Ch.6 walks through OT asset inventory as the entry point for the whole security control selection process.
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,NIST_SP_800-53r5,CM-8,System Component Inventory,Primary,
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,NIST_SP_800-53r5,RA-2,Security Categorization,Supporting,Categorization of a system as a 'Critical Cyber System' is functionally a criticality/impact categorization exercise.
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,NIST_SP_800-53r5,PM-5,System Inventory,Supporting,
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,IEC_62443-2-1,Cl. 4.2.3,"Risk identification, classification, and assessment (asset/criticality identification within the CSMS)",Primary,
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,CIS_v8,CIS 1,Inventory and Control of Enterprise Assets,Primary,
+TSA-A,III.A,Critical Cyber System identification,SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment,CIS_v8,CIS 2,Inventory and Control of Software Assets,Supporting,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,NIST_SP_800-82r3,Sec. 6.2 Network Architecture / Segmentation,"OT network architecture, segmentation and segregation, DMZ design patterns",Primary,This is a named subsection of 800-82r3 Ch.6 and the closest direct analog to SD III.B.
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,NIST_SP_800-53r5,SC-7,Boundary Protection,Primary,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,NIST_SP_800-53r5,SC-7(21),Boundary Protection | Isolation of System Components,Primary,Directly analogous to 'zone boundaries' language in III.B.1.c.
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,NIST_SP_800-53r5,AC-4,Information Flow Enforcement,Primary,Maps to the 'prohibit OT services traversing IT unless encrypted' clause.
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,NIST_SP_800-53r5,SC-32,System Partitioning,Supporting,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,IEC_62443-3-3,FR 5 / SR 5.1,Restricted Data Flow / Network segmentation,Primary,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,IEC_62443-3-3,SR 5.2,Zone boundary protection,Primary,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,CIS_v8,CIS 12,"Network Infrastructure Management (incl. Safeguard 12.2, network segmentation)",Primary,
+TSA-B,III.B,IT/OT network segmentation,SD Pipeline-2021-02C III.B.1-2,CIS_v8,CIS 13,Network Monitoring and Defense,Supporting,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-82r3,Sec. 6.2 Identity and Access Management for OT,"OT-tailored access control guidance, incl. compensating controls for legacy field devices",Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-53r5,IA-2(1)/(2),Identification and Authentication | Multi-factor Authentication,Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-53r5,IA-5,Authenticator Management,Primary,Covers the password-reset-schedule clause.
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-53r5,AC-6,Least Privilege,Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-53r5,AC-5,Separation of Duties,Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,NIST_SP_800-53r5,AC-2,Account Management,Supporting,Covers shared/group account handling.
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,IEC_62443-3-3,"FR 1 / SR 1.1, SR 1.2, SR 1.5","Identification and Authentication Control (human user, software process/device, authenticator management)",Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,IEC_62443-3-3,FR 2 / SR 2.1,Use Control / Authorization enforcement,Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,CIS_v8,CIS 5,Account Management,Primary,
+TSA-C,III.C,Access control,SD Pipeline-2021-02C III.C.1-5,CIS_v8,CIS 6,Access Control Management,Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,NIST_SP_800-82r3,Sec. 6.2 Monitoring / Sec. 5 Threats,OT-specific intrusion detection and anomaly monitoring guidance,Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,NIST_SP_800-53r5,SI-4,System Monitoring,Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,NIST_SP_800-53r5,AU-6,"Audit Record Review, Analysis, and Reporting",Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,NIST_SP_800-53r5,AU-11,Audit Record Retention,Supporting,Maps to the 'sufficient retention period' clause.
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,NIST_SP_800-53r5,CA-7,Continuous Monitoring,Supporting,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,IEC_62443-3-3,"FR 6 / SR 6.1, SR 6.2","Timely Response to Events / Audit log accessibility, continuous monitoring",Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,IEC_62443-3-3,"FR 3 / SR 3.1, SR 3.2","System Integrity / Communication integrity, malicious code protection",Supporting,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,CIS_v8,CIS 8,Audit Log Management,Primary,
+TSA-D,III.D,Continuous monitoring and threat detection,SD Pipeline-2021-02C III.D.1-4,CIS_v8,CIS 13,Network Monitoring and Defense,Primary,
+TSA-E,III.E,Patch and vulnerability management,SD Pipeline-2021-02C III.E.1-3,NIST_SP_800-82r3,Sec. 6.2 Patch Management for OT,"OT patch management guidance, incl. test-before-deploy and compensating controls where patching is infeasible",Primary,
+TSA-E,III.E,Patch and vulnerability management,SD Pipeline-2021-02C III.E.1-3,NIST_SP_800-53r5,SI-2,Flaw Remediation,Primary,
+TSA-E,III.E,Patch and vulnerability management,SD Pipeline-2021-02C III.E.1-3,NIST_SP_800-53r5,RA-5,Vulnerability Monitoring and Scanning,Primary,RA-5(11)/CSAM-style KEV prioritization aligns with III.E.2.b.
+TSA-E,III.E,Patch and vulnerability management,SD Pipeline-2021-02C III.E.1-3,IEC_62443-2-3,Whole document,Patch management in the IACS environment (dedicated IEC Technical Report),Primary,This is the one place a separate IEC 62443 part (not -3-3) is the better-fitting reference.
+TSA-E,III.E,Patch and vulnerability management,SD Pipeline-2021-02C III.E.1-3,CIS_v8,CIS 7,Continuous Vulnerability Management,Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-82r3,Sec. 6.2 Incident Response for OT,"OT incident response guidance, incl. coordination with physical/safety systems",Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-53r5,IR-4,Incident Handling,Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-53r5,IR-8,Incident Response Plan,Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-53r5,IR-3,Incident Response Testing,Primary,Maps to the annual/2-objective exercise requirement.
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-53r5,CP-9,System Backup,Supporting,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,NIST_SP_800-53r5,CP-10,System Recovery and Reconstitution,Supporting,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,IEC_62443-2-1,Cl. 4.3.4.5,Incident planning and response (within the CSMS),Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,IEC_62443-3-3,FR 6 / SR 6.2,Timely Response to Events / Continuous monitoring feeding response,Supporting,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,CIS_v8,CIS 17,Incident Response Management,Primary,
+TSA-F,III.F,Cybersecurity Incident Response Plan (CIRP),SD Pipeline-2021-02C III.F.1; 02D testing amendment,CIS_v8,CIS 11,Data Recovery,Supporting,
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,NIST_SP_800-82r3,"Sec. 6.2 Assessment, Authorization, and Monitoring for OT",OT-tailored control assessment and continuous monitoring guidance,Primary,
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,NIST_SP_800-53r5,CA-2,Control Assessments,Primary,
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,NIST_SP_800-53r5,CA-8,Penetration Testing,Primary,
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,NIST_SP_800-53r5,CA-7,Continuous Monitoring,Supporting,Overlaps with TSA-D; here in the sense of ongoing assessment cadence rather than technical detection.
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,IEC_62443-2-1,Cl. 4.4.3,Conformance / periodic audit of the CSMS,Primary,
+TSA-G,III.G,Cybersecurity Assessment Program (CAP),SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment,CIS_v8,CIS 18,Penetration Testing,Primary,

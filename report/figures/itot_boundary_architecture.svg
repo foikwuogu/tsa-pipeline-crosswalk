@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <!-- surfaces / chrome -->
+  <rect x="0" y="0" width="1200" height="760" fill="#fcfcfb"/>
+
+  <!-- title -->
+  <text x="40" y="42" font-size="22" font-weight="600" fill="#0b0b0b">IT/OT boundary architecture — reference pattern for TSA SD Pipeline-2021-02 III.B</text>
+  <text x="40" y="66" font-size="14" fill="#52514e">TSA-B (network segmentation): NIST SP 800-53r5 SC-7/SC-7(21)/AC-4 · NIST SP 800-82r3 §6.2 · IEC 62443-3-3 FR5/SR5.1-5.2 · CIS v8 Control 12</text>
+
+  <!-- IT ZONE -->
+  <rect x="40" y="110" width="330" height="560" rx="10" fill="#2a78d6" fill-opacity="0.08" stroke="#2a78d6" stroke-width="2"/>
+  <text x="60" y="140" font-size="16" font-weight="600" fill="#0b0b0b">IT zone (corporate / enterprise)</text>
+
+  <rect x="70" y="165" width="270" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="90" y="196" font-size="13" fill="#0b0b0b">Corporate workstations / email</text>
+
+  <rect x="70" y="230" width="270" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="90" y="261" font-size="13" fill="#0b0b0b">ERP / business systems</text>
+
+  <rect x="70" y="295" width="270" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="90" y="326" font-size="13" fill="#0b0b0b">Endpoint detection &amp; response (EDR)</text>
+
+  <rect x="70" y="360" width="270" height="80" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="90" y="386" font-size="13" fill="#0b0b0b">Identity provider — MFA</text>
+  <text x="90" y="406" font-size="12" fill="#52514e">(TSA-C / IA-2(1)(2), IEC 62443 FR1)</text>
+
+  <rect x="70" y="460" width="270" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="90" y="491" font-size="13" fill="#0b0b0b">Email / web security gateway</text>
+  <text x="90" y="505" font-size="11" fill="#898781">(TSA-D III.D.1 — malicious email/IP/domain blocking)</text>
+
+  <!-- DMZ ZONE -->
+  <rect x="415" y="110" width="330" height="560" rx="10" fill="#1baf7a" fill-opacity="0.10" stroke="#1baf7a" stroke-width="2"/>
+  <text x="435" y="140" font-size="16" font-weight="600" fill="#0b0b0b">Zone boundary / DMZ</text>
+  <text x="435" y="158" font-size="12" fill="#52514e">SD III.B.1.c "zone boundaries"; III.B.2.a-b</text>
+
+  <rect x="445" y="180" width="270" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="465" y="205" font-size="13" fill="#0b0b0b">Next-gen firewall pair</text>
+  <text x="465" y="222" font-size="11" fill="#898781">default-deny; SC-7 boundary protection</text>
+
+  <rect x="445" y="255" width="270" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="465" y="280" font-size="13" fill="#0b0b0b">Jump host (MFA, session recorded)</text>
+  <text x="465" y="297" font-size="11" fill="#898781">only sanctioned IT→OT engineering path</text>
+
+  <rect x="445" y="330" width="270" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="465" y="355" font-size="13" fill="#0b0b0b">One-way data diode</text>
+  <text x="465" y="372" font-size="11" fill="#898781">OT historian → IT reporting, hardware-enforced</text>
+
+  <rect x="445" y="405" width="270" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="465" y="430" font-size="13" fill="#0b0b0b">SIEM / log aggregation</text>
+  <text x="465" y="447" font-size="11" fill="#898781">TSA-D III.D.2-3 — audit &amp; retention; CIS 8</text>
+
+  <rect x="445" y="480" width="270" height="70" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="465" y="505" font-size="13" fill="#0b0b0b">Encrypted relay (TLS)</text>
+  <text x="465" y="522" font-size="11" fill="#898781">only path for OT services crossing to IT,</text>
+  <text x="465" y="537" font-size="11" fill="#898781">per SD III.B.2.b encryption-in-transit requirement</text>
+
+  <!-- OT ZONE -->
+  <rect x="790" y="110" width="370" height="560" rx="10" fill="#eb6834" fill-opacity="0.08" stroke="#eb6834" stroke-width="2"/>
+  <text x="810" y="140" font-size="16" font-weight="600" fill="#0b0b0b">OT zone (control systems)</text>
+
+  <rect x="820" y="165" width="310" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="196" font-size="13" fill="#0b0b0b">SCADA / HMI servers</text>
+
+  <rect x="820" y="230" width="310" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="261" font-size="13" fill="#0b0b0b">Historian (OT-side)</text>
+
+  <rect x="820" y="295" width="310" height="52" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="326" font-size="13" fill="#0b0b0b">Engineering workstations</text>
+
+  <rect x="820" y="360" width="310" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="385" font-size="13" fill="#0b0b0b">PLCs / RTUs (field devices)</text>
+  <text x="840" y="402" font-size="11" fill="#898781">TSA-E III.E.3 — patch-exception path applies here</text>
+
+  <rect x="820" y="435" width="310" height="60" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="460" font-size="13" fill="#0b0b0b">Safety Instrumented System (SIS)</text>
+  <text x="840" y="477" font-size="11" fill="#898781">isolated on its own segment — never bridged</text>
+
+  <rect x="820" y="510" width="310" height="70" rx="6" fill="#fcfcfb" stroke="#c3c2b7"/>
+  <text x="840" y="535" font-size="13" fill="#0b0b0b">Manual isolation switch</text>
+  <text x="840" y="552" font-size="11" fill="#898781">TSA-D III.D.4 &amp; TSA-F III.F.1.d — capability</text>
+  <text x="840" y="567" font-size="11" fill="#898781">to sever OT from IT during an incident</text>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <!-- IT <-> DMZ bidirectional via firewall/jump host -->
+  <line x1="340" y1="210" x2="445" y2="210" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <!-- OT -> DMZ one-way diode -->
+  <line x1="820" y1="360" x2="715" y2="360" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- DMZ -> IT encrypted relay -->
+  <line x1="445" y1="515" x2="340" y2="480" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- DMZ -> OT jump host managed access -->
+  <line x1="715" y1="285" x2="820" y2="285" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Prohibited direct IT-OT link -->
+  <line x1="340" y1="650" x2="1130" y2="650" stroke="#d03b3b" stroke-width="2.5" stroke-dasharray="6,5"/>
+  <text x="735" y="640" font-size="12" fill="#d03b3b" text-anchor="middle" font-weight="600">✕ no direct IT↔OT path (SD III.B.2.a prohibited)</text>
+
+  <!-- Legend -->
+  <rect x="40" y="695" width="14" height="14" fill="#2a78d6" fill-opacity="0.3" stroke="#2a78d6"/>
+  <text x="60" y="706" font-size="12" fill="#52514e">IT zone</text>
+  <rect x="140" y="695" width="14" height="14" fill="#1baf7a" fill-opacity="0.3" stroke="#1baf7a"/>
+  <text x="160" y="706" font-size="12" fill="#52514e">Zone boundary / DMZ</text>
+  <rect x="320" y="695" width="14" height="14" fill="#eb6834" fill-opacity="0.3" stroke="#eb6834"/>
+  <text x="340" y="706" font-size="12" fill="#52514e">OT zone</text>
+
+  <text x="40" y="735" font-size="11" fill="#898781">Illustrative reference pattern only — not a certification or an as-built diagram of any specific operator's network. See docs/LIMITATIONS.md.</text>
+
+</svg>

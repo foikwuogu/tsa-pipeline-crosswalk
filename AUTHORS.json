@@ -1,0 +1,37 @@
+{
+  "_comment": "Author block for this project. Every document, citation file, Zenodo record, manuscript author list, and commit reads from here.",
+  "authors": [
+    {
+      "name": "Ikwuogu, Friday Ogochukwu",
+      "family": "Ikwuogu",
+      "given": "Friday Ogochukwu",
+      "orcid": "0009-0009-2222-1318",
+      "email": "Friday.ikwuogu@gmail.com",
+      "affiliation": "Independent Researcher, Odessa, Texas, USA",
+      "roles": ["Conceptualization", "Methodology", "Data curation", "Software", "Validation", "Writing - original draft"],
+      "corresponding": true
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Mike-Ewewie, David",
+      "family": "Mike-Ewewie",
+      "given": "David",
+      "orcid": "",
+      "email": "mike_d63291@utpb.edu",
+      "affiliation": "Computer Science Department, University of Texas Permian Basin, Odessa, Texas, USA",
+      "roles": ["Validation", "Writing - review and editing"],
+      "corresponding": false
+    },
+    {
+      "name": "Ayozie, Osorachukwu Maurice",
+      "family": "Ayozie",
+      "given": "Osorachukwu Maurice",
+      "orcid": "",
+      "email": "ayozie_o62237@utpb.edu",
+      "affiliation": "MSc Computer Science (Cybersecurity), University of Texas Permian Basin, Odessa, Texas, USA",
+      "roles": ["Validation", "Writing - review and editing"],
+      "corresponding": false
+    }
+  ]
+}

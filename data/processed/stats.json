@@ -1,0 +1,29 @@
+{
+  "n_outcomes": 7,
+  "n_mapping_rows": 56,
+  "n_unique_controls": 54,
+  "n_frameworks": 6,
+  "frameworks": [
+    "CIS_v8",
+    "IEC_62443-2-1",
+    "IEC_62443-2-3",
+    "IEC_62443-3-3",
+    "NIST_SP_800-53r5",
+    "NIST_SP_800-82r3"
+  ],
+  "mapping_strength_counts": {
+    "Primary": 42,
+    "Supporting": 14
+  },
+  "outcomes_with_coverage_gap": 0,
+  "sd_version_used": "SD Pipeline-2021-02C (2022-07-27), amended by 02D (2023-07-27) as noted per-outcome",
+  "n_controls_per_outcome": {
+    "TSA-A": 7,
+    "TSA-B": 9,
+    "TSA-C": 10,
+    "TSA-D": 9,
+    "TSA-E": 5,
+    "TSA-F": 10,
+    "TSA-G": 6
+  }
+}

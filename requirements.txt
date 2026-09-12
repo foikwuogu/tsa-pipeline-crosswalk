@@ -1,0 +1,2 @@
+# code/01_fetch.py and code/02_build.py use only the Python standard library.
+# No external Python dependencies for v1.0.

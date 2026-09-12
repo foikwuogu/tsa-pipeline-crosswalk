@@ -1,0 +1,36 @@
+QA REPORT -- Policy-to-Control Crosswalk v1.0
+outcomes: 7
+mapping rows: 56
+unique controls referenced: 54
+
+-- coverage per outcome (flag any outcome missing a framework) --
+  TSA-A (Critical Cyber System identification): 7 controls across ['CIS_v8', 'IEC_62443-2-1', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-B (IT/OT network segmentation): 9 controls across ['CIS_v8', 'IEC_62443-3-3', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-C (Access control): 10 controls across ['CIS_v8', 'IEC_62443-3-3', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-D (Continuous monitoring and threat detection): 9 controls across ['CIS_v8', 'IEC_62443-3-3', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-E (Patch and vulnerability management): 5 controls across ['CIS_v8', 'IEC_62443-2-3', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-F (Cybersecurity Incident Response Plan (CIRP)): 10 controls across ['CIS_v8', 'IEC_62443-2-1', 'IEC_62443-3-3', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+  TSA-G (Cybersecurity Assessment Program (CAP)): 6 controls across ['CIS_v8', 'IEC_62443-2-1', 'NIST_SP_800-53r5', 'NIST_SP_800-82r3']
+outcomes with a coverage gap in at least one core framework: 0
+
+-- mapping_strength distribution --
+  Primary: 42
+  Supporting: 14
+
+-- integrity checks --
+  mapping rows referencing an unknown tsa_outcome_id: 0
+  mapping rows with an unrecognized framework label: 0
+  exact duplicate (outcome, framework, control_id) rows: 0
+
+-- named spot checks (author: verify these five by hand against the sources) --
+  [ ] TSA-B -> NIST_SP_800-53r5 SC-7(21): Confirm SC-7(21) 'Isolation of System Components' exists in SP 800-53 Rev.5 and reads as claimed.
+  [ ] TSA-C -> IEC_62443-3-3 FR1/SR1.1: Confirm SR 1.1 is 'Human user identification and authentication' in IEC 62443-3-3.
+  [ ] TSA-E -> IEC_62443-2-3: Confirm IEC 62443-2-3 is titled 'Patch management in the IACS environment' and is the correct part (not -3-3) for this outcome.
+  [ ] TSA-F -> NIST_SP_800-53r5 IR-3: Confirm IR-3 is 'Incident Response Testing' and fits the 02D 'test >=2 objectives annually' clause.
+  [ ] TSA-G -> CIS_v8 CIS 18: Confirm CIS Control 18 in CIS Controls v8 is 'Penetration Testing'.
+
+-- threshold counts appearing in the technical report / README (must match stats.json) --
+  n_outcomes = 7
+  n_mapping_rows = 56
+  n_unique_controls = 54
+  n_frameworks = 6

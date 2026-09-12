@@ -1,0 +1,856 @@
+{
+  "_comment": "Bidirectional Policy-to-Control Crosswalk, v1.0. Forward: outcomes[].mapped_controls. Reverse: controls_index.",
+  "outcomes": [
+    {
+      "id": "TSA-A",
+      "sd_section": "III.A",
+      "title": "Critical Cyber System identification",
+      "outcome_text": "Identify the Owner/Operator's Critical Cyber Systems: any Information or Operational Technology system or data that, if compromised or exploited, could result in operational disruption. Reassess this designation following operational changes and notify TSA within 60 days (added by 02D).",
+      "sd_citation": "SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment",
+      "notes": "Foundation for all downstream requirements; scope of 'Critical Cyber System' drives which assets the rest of the outcomes apply to.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 / Table 6-1",
+          "control_title": "OT asset inventory and system categorization guidance",
+          "mapping_strength": "Primary",
+          "notes": "800-82r3 Ch.6 walks through OT asset inventory as the entry point for the whole security control selection process."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CM-8",
+          "control_title": "System Component Inventory",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "RA-2",
+          "control_title": "Security Categorization",
+          "mapping_strength": "Supporting",
+          "notes": "Categorization of a system as a 'Critical Cyber System' is functionally a criticality/impact categorization exercise."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "PM-5",
+          "control_title": "System Inventory",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-2-1",
+          "control_id": "Cl. 4.2.3",
+          "control_title": "Risk identification, classification, and assessment (asset/criticality identification within the CSMS)",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 1",
+          "control_title": "Inventory and Control of Enterprise Assets",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 2",
+          "control_title": "Inventory and Control of Software Assets",
+          "mapping_strength": "Supporting",
+          "notes": null
+        }
+      ],
+      "control_count": 7
+    },
+    {
+      "id": "TSA-B",
+      "sd_section": "III.B",
+      "title": "IT/OT network segmentation",
+      "outcome_text": "Implement network segmentation policies and controls designed to prevent operational disruption if either the IT or OT system is compromised: document IT/OT interdependencies and external OT connections, define zone boundaries, prevent unauthorized communications between zones, and prohibit OT services from traversing the IT system unless encrypted in transit.",
+      "sd_citation": "SD Pipeline-2021-02C III.B.1-2",
+      "notes": "The IT/OT isolation outcome referenced in the project description; see report/figures/itot_boundary_architecture.svg.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Network Architecture / Segmentation",
+          "control_title": "OT network architecture, segmentation and segregation, DMZ design patterns",
+          "mapping_strength": "Primary",
+          "notes": "This is a named subsection of 800-82r3 Ch.6 and the closest direct analog to SD III.B."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "SC-7",
+          "control_title": "Boundary Protection",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "SC-7(21)",
+          "control_title": "Boundary Protection | Isolation of System Components",
+          "mapping_strength": "Primary",
+          "notes": "Directly analogous to 'zone boundaries' language in III.B.1.c."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AC-4",
+          "control_title": "Information Flow Enforcement",
+          "mapping_strength": "Primary",
+          "notes": "Maps to the 'prohibit OT services traversing IT unless encrypted' clause."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "SC-32",
+          "control_title": "System Partitioning",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 5 / SR 5.1",
+          "control_title": "Restricted Data Flow / Network segmentation",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "SR 5.2",
+          "control_title": "Zone boundary protection",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 12",
+          "control_title": "Network Infrastructure Management (incl. Safeguard 12.2, network segmentation)",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 13",
+          "control_title": "Network Monitoring and Defense",
+          "mapping_strength": "Supporting",
+          "notes": null
+        }
+      ],
+      "control_count": 9
+    },
+    {
+      "id": "TSA-C",
+      "sd_section": "III.C",
+      "title": "Access control",
+      "outcome_text": "Establish a memorized-secret (password) reset schedule with documented mitigations for components that cannot be reset; apply multi-factor authentication or equivalent-strength compensating controls; manage access by least privilege and separation of duties; limit and control shared/group accounts; review domain trust relationships on a schedule.",
+      "sd_citation": "SD Pipeline-2021-02C III.C.1-5",
+      "notes": "Compensating controls are explicitly permitted for industrial control workstations under 49 CFR 192/195 -- an OT-specific carve-out, not a generic IT control.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Identity and Access Management for OT",
+          "control_title": "OT-tailored access control guidance, incl. compensating controls for legacy field devices",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "IA-2(1)/(2)",
+          "control_title": "Identification and Authentication | Multi-factor Authentication",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "IA-5",
+          "control_title": "Authenticator Management",
+          "mapping_strength": "Primary",
+          "notes": "Covers the password-reset-schedule clause."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AC-6",
+          "control_title": "Least Privilege",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AC-5",
+          "control_title": "Separation of Duties",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AC-2",
+          "control_title": "Account Management",
+          "mapping_strength": "Supporting",
+          "notes": "Covers shared/group account handling."
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 1 / SR 1.1, SR 1.2, SR 1.5",
+          "control_title": "Identification and Authentication Control (human user, software process/device, authenticator management)",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 2 / SR 2.1",
+          "control_title": "Use Control / Authorization enforcement",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 5",
+          "control_title": "Account Management",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 6",
+          "control_title": "Access Control Management",
+          "mapping_strength": "Primary",
+          "notes": null
+        }
+      ],
+      "control_count": 10
+    },
+    {
+      "id": "TSA-D",
+      "sd_section": "III.D",
+      "title": "Continuous monitoring and threat detection",
+      "outcome_text": "Prevent and audit malicious email/IP/domain/code activity; monitor for and respond to unauthorized code execution and command-and-control communications; continuously collect and analyze data for intrusions and anomalous behavior with sufficient retention for investigation; maintain mitigation/manual controls to isolate ICS during an IT-side incident.",
+      "sd_citation": "SD Pipeline-2021-02C III.D.1-4",
+      "notes": "III.D.4 (manual isolation capability) overlaps functionally with TSA-B and TSA-F; kept separate because it is stated as a detection/response control, not an architecture control.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Monitoring / Sec. 5 Threats",
+          "control_title": "OT-specific intrusion detection and anomaly monitoring guidance",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "SI-4",
+          "control_title": "System Monitoring",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AU-6",
+          "control_title": "Audit Record Review, Analysis, and Reporting",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "AU-11",
+          "control_title": "Audit Record Retention",
+          "mapping_strength": "Supporting",
+          "notes": "Maps to the 'sufficient retention period' clause."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CA-7",
+          "control_title": "Continuous Monitoring",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 6 / SR 6.1, SR 6.2",
+          "control_title": "Timely Response to Events / Audit log accessibility, continuous monitoring",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 3 / SR 3.1, SR 3.2",
+          "control_title": "System Integrity / Communication integrity, malicious code protection",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 8",
+          "control_title": "Audit Log Management",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 13",
+          "control_title": "Network Monitoring and Defense",
+          "mapping_strength": "Primary",
+          "notes": null
+        }
+      ],
+      "control_count": 9
+    },
+    {
+      "id": "TSA-E",
+      "sd_section": "III.E",
+      "title": "Patch and vulnerability management",
+      "outcome_text": "Keep critical security patches and updates current on Critical Cyber Systems under a documented risk methodology that prioritizes CISA Known Exploited Vulnerabilities; where patching would severely degrade OT operational capability, document a timeline for compensating mitigations instead.",
+      "sd_citation": "SD Pipeline-2021-02C III.E.1-3",
+      "notes": "The OT patch-exception clause (III.E.3) is the single most OT-specific measure in the directive; a naive IT patch-SLA control does not satisfy it.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Patch Management for OT",
+          "control_title": "OT patch management guidance, incl. test-before-deploy and compensating controls where patching is infeasible",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "SI-2",
+          "control_title": "Flaw Remediation",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "RA-5",
+          "control_title": "Vulnerability Monitoring and Scanning",
+          "mapping_strength": "Primary",
+          "notes": "RA-5(11)/CSAM-style KEV prioritization aligns with III.E.2.b."
+        },
+        {
+          "framework": "IEC_62443-2-3",
+          "control_id": "Whole document",
+          "control_title": "Patch management in the IACS environment (dedicated IEC Technical Report)",
+          "mapping_strength": "Primary",
+          "notes": "This is the one place a separate IEC 62443 part (not -3-3) is the better-fitting reference."
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 7",
+          "control_title": "Continuous Vulnerability Management",
+          "mapping_strength": "Primary",
+          "notes": null
+        }
+      ],
+      "control_count": 5
+    },
+    {
+      "id": "TSA-F",
+      "sd_section": "III.F",
+      "title": "Cybersecurity Incident Response Plan (CIRP)",
+      "outcome_text": "Maintain an up-to-date CIRP covering prompt containment, network segregation to stop lateral spread, secure and intact backups, and an established capability/governance to isolate IT from OT during an incident; exercise the plan at least annually, testing at least two response objectives with active participation from named personnel (02D addition).",
+      "sd_citation": "SD Pipeline-2021-02C III.F.1; 02D testing amendment",
+      "notes": null,
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Incident Response for OT",
+          "control_title": "OT incident response guidance, incl. coordination with physical/safety systems",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "IR-4",
+          "control_title": "Incident Handling",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "IR-8",
+          "control_title": "Incident Response Plan",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "IR-3",
+          "control_title": "Incident Response Testing",
+          "mapping_strength": "Primary",
+          "notes": "Maps to the annual/2-objective exercise requirement."
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CP-9",
+          "control_title": "System Backup",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CP-10",
+          "control_title": "System Recovery and Reconstitution",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-2-1",
+          "control_id": "Cl. 4.3.4.5",
+          "control_title": "Incident planning and response (within the CSMS)",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "IEC_62443-3-3",
+          "control_id": "FR 6 / SR 6.2",
+          "control_title": "Timely Response to Events / Continuous monitoring feeding response",
+          "mapping_strength": "Supporting",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 17",
+          "control_title": "Incident Response Management",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 11",
+          "control_title": "Data Recovery",
+          "mapping_strength": "Supporting",
+          "notes": null
+        }
+      ],
+      "control_count": 10
+    },
+    {
+      "id": "TSA-G",
+      "sd_section": "III.G",
+      "title": "Cybersecurity Assessment Program (CAP)",
+      "outcome_text": "Assess the effectiveness of the approved Cybersecurity Implementation Plan; conduct an architectural design review at least every two years; conduct penetration testing (IT) and adversarial-style assessment; test at least 30% of implemented measures annually, reaching 100% coverage over any three-year period (02D addition); submit an annual CAP report to TSA.",
+      "sd_citation": "SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment",
+      "notes": "02D also eliminated the prior 'alternative measures' safe-harbor referenced in earlier SD-02B guidance.",
+      "mapped_controls": [
+        {
+          "framework": "NIST_SP_800-82r3",
+          "control_id": "Sec. 6.2 Assessment, Authorization, and Monitoring for OT",
+          "control_title": "OT-tailored control assessment and continuous monitoring guidance",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CA-2",
+          "control_title": "Control Assessments",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CA-8",
+          "control_title": "Penetration Testing",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "NIST_SP_800-53r5",
+          "control_id": "CA-7",
+          "control_title": "Continuous Monitoring",
+          "mapping_strength": "Supporting",
+          "notes": "Overlaps with TSA-D; here in the sense of ongoing assessment cadence rather than technical detection."
+        },
+        {
+          "framework": "IEC_62443-2-1",
+          "control_id": "Cl. 4.4.3",
+          "control_title": "Conformance / periodic audit of the CSMS",
+          "mapping_strength": "Primary",
+          "notes": null
+        },
+        {
+          "framework": "CIS_v8",
+          "control_id": "CIS 18",
+          "control_title": "Penetration Testing",
+          "mapping_strength": "Primary",
+          "notes": null
+        }
+      ],
+      "control_count": 6
+    }
+  ],
+  "controls_index": [
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 1",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 11",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 12",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 13",
+      "satisfies_tsa_outcomes": [
+        "TSA-B",
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 17",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 18",
+      "satisfies_tsa_outcomes": [
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 2",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 5",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 6",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 7",
+      "satisfies_tsa_outcomes": [
+        "TSA-E"
+      ]
+    },
+    {
+      "framework": "CIS_v8",
+      "control_id": "CIS 8",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "IEC_62443-2-1",
+      "control_id": "Cl. 4.2.3",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "IEC_62443-2-1",
+      "control_id": "Cl. 4.3.4.5",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "IEC_62443-2-1",
+      "control_id": "Cl. 4.4.3",
+      "satisfies_tsa_outcomes": [
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "IEC_62443-2-3",
+      "control_id": "Whole document",
+      "satisfies_tsa_outcomes": [
+        "TSA-E"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 1 / SR 1.1, SR 1.2, SR 1.5",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 2 / SR 2.1",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 3 / SR 3.1, SR 3.2",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 5 / SR 5.1",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 6 / SR 6.1, SR 6.2",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "FR 6 / SR 6.2",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "IEC_62443-3-3",
+      "control_id": "SR 5.2",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AC-2",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AC-4",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AC-5",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AC-6",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AU-11",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "AU-6",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CA-2",
+      "satisfies_tsa_outcomes": [
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CA-7",
+      "satisfies_tsa_outcomes": [
+        "TSA-D",
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CA-8",
+      "satisfies_tsa_outcomes": [
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CM-8",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CP-10",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "CP-9",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "IA-2(1)/(2)",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "IA-5",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "IR-3",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "IR-4",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "IR-8",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "PM-5",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "RA-2",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "RA-5",
+      "satisfies_tsa_outcomes": [
+        "TSA-E"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "SC-32",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "SC-7",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "SC-7(21)",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "SI-2",
+      "satisfies_tsa_outcomes": [
+        "TSA-E"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-53r5",
+      "control_id": "SI-4",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 / Table 6-1",
+      "satisfies_tsa_outcomes": [
+        "TSA-A"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Assessment, Authorization, and Monitoring for OT",
+      "satisfies_tsa_outcomes": [
+        "TSA-G"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Identity and Access Management for OT",
+      "satisfies_tsa_outcomes": [
+        "TSA-C"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Incident Response for OT",
+      "satisfies_tsa_outcomes": [
+        "TSA-F"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Monitoring / Sec. 5 Threats",
+      "satisfies_tsa_outcomes": [
+        "TSA-D"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Network Architecture / Segmentation",
+      "satisfies_tsa_outcomes": [
+        "TSA-B"
+      ]
+    },
+    {
+      "framework": "NIST_SP_800-82r3",
+      "control_id": "Sec. 6.2 Patch Management for OT",
+      "satisfies_tsa_outcomes": [
+        "TSA-E"
+      ]
+    }
+  ]
+}

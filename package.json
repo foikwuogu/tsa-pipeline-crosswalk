@@ -1,0 +1,13 @@
+{
+  "name": "tsa-pipeline-crosswalk",
+  "version": "0.1.0-draft",
+  "private": true,
+  "description": "Report build for the Policy-to-Control Crosswalk v1.0 (TSA Pipeline SD 2021-02 series)",
+  "scripts": {
+    "build:report": "node code/05_build_report.js",
+    "build:report:final": "node code/05_build_report.js --final"
+  },
+  "dependencies": {
+    "docx": "*"
+  }
+}

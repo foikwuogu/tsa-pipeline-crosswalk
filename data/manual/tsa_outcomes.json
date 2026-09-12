@@ -1,0 +1,62 @@
+{
+  "_comment": "Curated by the author/research team from the primary source text. Unit of analysis = one TSA performance-based outcome clause. Anchored on SD Pipeline-2021-02C/D structure (Sections III.A-G), which TSA's own ratification notice for 02E describes as unchanged in substance (definitional harmonization only). VERIFY POINT: confirm against the current SD Pipeline-2021-02F/G text before publication -- see docs/LIMITATIONS.md.",
+  "source_version_used": "SD Pipeline-2021-02C (2022-07-27), amended by 02D (2023-07-27) as noted per-outcome",
+  "outcomes": [
+    {
+      "id": "TSA-A",
+      "sd_section": "III.A",
+      "title": "Critical Cyber System identification",
+      "outcome_text": "Identify the Owner/Operator's Critical Cyber Systems: any Information or Operational Technology system or data that, if compromised or exploited, could result in operational disruption. Reassess this designation following operational changes and notify TSA within 60 days (added by 02D).",
+      "sd_citation": "SD Pipeline-2021-02C III.A; VII.B (definition); 02D reassessment amendment",
+      "notes": "Foundation for all downstream requirements; scope of 'Critical Cyber System' drives which assets the rest of the outcomes apply to."
+    },
+    {
+      "id": "TSA-B",
+      "sd_section": "III.B",
+      "title": "IT/OT network segmentation",
+      "outcome_text": "Implement network segmentation policies and controls designed to prevent operational disruption if either the IT or OT system is compromised: document IT/OT interdependencies and external OT connections, define zone boundaries, prevent unauthorized communications between zones, and prohibit OT services from traversing the IT system unless encrypted in transit.",
+      "sd_citation": "SD Pipeline-2021-02C III.B.1-2",
+      "notes": "The IT/OT isolation outcome referenced in the project description; see report/figures/itot_boundary_architecture.svg."
+    },
+    {
+      "id": "TSA-C",
+      "sd_section": "III.C",
+      "title": "Access control",
+      "outcome_text": "Establish a memorized-secret (password) reset schedule with documented mitigations for components that cannot be reset; apply multi-factor authentication or equivalent-strength compensating controls; manage access by least privilege and separation of duties; limit and control shared/group accounts; review domain trust relationships on a schedule.",
+      "sd_citation": "SD Pipeline-2021-02C III.C.1-5",
+      "notes": "Compensating controls are explicitly permitted for industrial control workstations under 49 CFR 192/195 -- an OT-specific carve-out, not a generic IT control."
+    },
+    {
+      "id": "TSA-D",
+      "sd_section": "III.D",
+      "title": "Continuous monitoring and threat detection",
+      "outcome_text": "Prevent and audit malicious email/IP/domain/code activity; monitor for and respond to unauthorized code execution and command-and-control communications; continuously collect and analyze data for intrusions and anomalous behavior with sufficient retention for investigation; maintain mitigation/manual controls to isolate ICS during an IT-side incident.",
+      "sd_citation": "SD Pipeline-2021-02C III.D.1-4",
+      "notes": "III.D.4 (manual isolation capability) overlaps functionally with TSA-B and TSA-F; kept separate because it is stated as a detection/response control, not an architecture control."
+    },
+    {
+      "id": "TSA-E",
+      "sd_section": "III.E",
+      "title": "Patch and vulnerability management",
+      "outcome_text": "Keep critical security patches and updates current on Critical Cyber Systems under a documented risk methodology that prioritizes CISA Known Exploited Vulnerabilities; where patching would severely degrade OT operational capability, document a timeline for compensating mitigations instead.",
+      "sd_citation": "SD Pipeline-2021-02C III.E.1-3",
+      "notes": "The OT patch-exception clause (III.E.3) is the single most OT-specific measure in the directive; a naive IT patch-SLA control does not satisfy it."
+    },
+    {
+      "id": "TSA-F",
+      "sd_section": "III.F",
+      "title": "Cybersecurity Incident Response Plan (CIRP)",
+      "outcome_text": "Maintain an up-to-date CIRP covering prompt containment, network segregation to stop lateral spread, secure and intact backups, and an established capability/governance to isolate IT from OT during an incident; exercise the plan at least annually, testing at least two response objectives with active participation from named personnel (02D addition).",
+      "sd_citation": "SD Pipeline-2021-02C III.F.1; 02D testing amendment",
+      "notes": null
+    },
+    {
+      "id": "TSA-G",
+      "sd_section": "III.G",
+      "title": "Cybersecurity Assessment Program (CAP)",
+      "outcome_text": "Assess the effectiveness of the approved Cybersecurity Implementation Plan; conduct an architectural design review at least every two years; conduct penetration testing (IT) and adversarial-style assessment; test at least 30% of implemented measures annually, reaching 100% coverage over any three-year period (02D addition); submit an annual CAP report to TSA.",
+      "sd_citation": "SD Pipeline-2021-02C III.G.2-3; 02D testing-coverage amendment",
+      "notes": "02D also eliminated the prior 'alternative measures' safe-harbor referenced in earlier SD-02B guidance."
+    }
+  ]
+}
