@@ -71,7 +71,7 @@ confirmed this crosswalk per `docs/VERIFY_CHECKLIST.md` as of 2026-09-09.
 
 ## Citation
 
-See `CITATION.cff`. DOI: pending first Zenodo release — see `docs/PUBLISH_GUIDE.md`.
+See `CITATION.cff`. DOI: 10.5281/zenodo.22730446.
 
 ## AI Assistance Statement
 
